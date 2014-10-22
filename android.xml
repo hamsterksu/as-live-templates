@@ -82,7 +82,7 @@
       <option name="XML_TEXT" value="true" />
     </context>
   </template>
-  <template name="f_ns" value="private static final String NAMESPACE = $CLASS_NAME$.class.getSimpleName();" description="Fragment Namespace Constant" toReformat="false" toShortenFQNames="true">
+  <template name="f_ns" value="private static final String NAMESPACE = $CLASS_NAME$.class.getName();" description="Fragment Namespace Constant" toReformat="false" toShortenFQNames="true">
     <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_STATEMENT" value="false" />
