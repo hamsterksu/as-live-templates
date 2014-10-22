@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="android">
+  <template name="CREATOR" value="protected $CLASS_NAME$(Parcel source){&#10;    $SELECTION$    &#10;}&#10;&#10;public final static Creator&lt;$CLASS_NAME$&gt; CREATOR = new Creator&lt;$CLASS_NAME$&gt;(){&#10;    @Override&#10;    public $CLASS_NAME$ createFromParcel(Parcel source) {&#10;        return new $CLASS_NAME$(source);&#10;    }&#10;&#10;    @Override&#10;    public $CLASS_NAME$[] newArray(int size) {&#10;        return new $CLASS_NAME$[size];&#10;    }&#10;}; " description="CREATOR" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="toast" value="android.widget.Toast.makeText($context$, $msg$, Toast.LENGTH_SHORT).show();" description="show toast" toReformat="false" toShortenFQNames="true">
+    <variable name="context" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="msg" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="inflate" value="android.view.LayoutInflater inflater = LayoutInflater.from($context$);&#10;android.view.View view = inflater.inflate(R.layout.$layout$, $parent$, $attach$);" description="Create layoutInflater and inflate view" toReformat="false" toShortenFQNames="true">
+    <variable name="context" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="layout" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="attach" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="findcast" value="($cast$) findViewById(R.id.$resId$);" description="findViewById with cast" toReformat="false" toShortenFQNames="true">
+    <variable name="cast" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="resId" expression="" defaultValue="R.id" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="ns-tools" value="xmlns:tools=&quot;http://schemas.android.com/tools&quot;" description="Add tools namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ns-android" value="xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;" description="Add android namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ns-app" value="xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;" description="adds application namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ttext" value="tools:text=&quot;$Text$&quot;" description="Add tools:text attribute" toReformat="false" toShortenFQNames="true">
+    <variable name="Text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="f_ns" value="private static final String NAMESPACE = $CLASS_NAME$.class.getSimpleName();" description="Fragment Namespace Constant" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="f_arg" value="private static final String $ARG_NAME$ = NAMESPACE + &quot;.$ARG_NAME$&quot;;" description="Declare fragment argument" toReformat="false" toShortenFQNames="true">
+    <variable name="ARG_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="f_new" value="public static $CLASS_NAME$ newInstance(){&#10;    return new $CLASS_NAME$();&#10;}" description="Declare static initialize method(newInstance)" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="f_new_args" value="public static $CLASS_NAME$ newInstance(){&#10;    Bundle args = new Bundle($ARGS_COUNT$);&#10;    &#10;    $CLASS_NAME$ f = new $CLASS_NAME$();&#10;    f.setArguments(args);&#10;    return f;&#10;}" description="Declare static initialize method(newInstance)" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGS_COUNT" expression="" defaultValue="1" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>
+
